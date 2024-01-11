@@ -16,7 +16,7 @@ export class AuthService {
     return this.http.get(this.usersApiUrl);
   }
 
-  getUserByEmail(email : string) {
+  getUserByEmail(email : any) {
     return this.http.get(this.usersApiUrl + '/' + email);
   }
 

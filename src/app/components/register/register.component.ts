@@ -19,20 +19,13 @@ export class RegisterComponent {
 
   }
 
-  firstFormGroup = this.formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this.formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-
   registerForm = this.formBuilder.group({
-    id : this.formBuilder.control(
+    /*id : this.formBuilder.control(
       '',
       Validators.compose(
         [Validators.required, Validators.minLength(5)]
       )
-    ),
+    ),*/
     nom : this.formBuilder.control('', Validators.required),
     prenom : this.formBuilder.control('', Validators.required),
     email : this.formBuilder.control(
@@ -42,6 +35,14 @@ export class RegisterComponent {
       )
     ),
     password : this.formBuilder.control(
+      '',
+      Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]
+      )
+    ),
+    passwordConfirmation : this.formBuilder.control(
       '',
       Validators.compose(
         [
@@ -62,7 +63,7 @@ export class RegisterComponent {
         }
       );
     } else { //Sinon
-      this.toastr.warning('Certaines informations sont incorrectes.')
+      this.toastr.warning('Certaines informations sont incorrectes.');
     }
   }
 

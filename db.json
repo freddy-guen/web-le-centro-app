@@ -1,10 +1,26 @@
 {
   "utilisateurs": [
-
+    {
+      "nom": "GUENENGAFO",
+      "prenom": "Freddy",
+      "email": "freddy_guenengafo@yahoo.fr",
+      "password": "Tests@1294",
+      "passwordConfirmation": "Test@1294",
+      "isActive": false,
+      "role": "",
+      "id": 1
+    },
+    {
+      "nom": "MINI",
+      "prenom": "Nelly",
+      "email": "mini.nelly@yahoo.fr",
+      "password": "Azerty@2023",
+      "passwordConfirmation": "Azerty@2023",
+      "isActive": false,
+      "role": "",
+      "id": 2
+    }
   ],
-
-
-
   "posts": [
     {
       "id": 1,
